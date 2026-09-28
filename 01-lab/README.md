@@ -7,6 +7,7 @@ Le but n'est pas de reproduire immédiatement une infrastructure complexe, mais 
 ## Navigation
 
 - [Architecture cible du laboratoire](architecture.md)
+- [Virtualisation : notions et préparation](virtualization.md)
 
 ## Objectifs du laboratoire
 
