@@ -4,6 +4,10 @@ Cette section documente la construction progressive d'un laboratoire informatiqu
 
 Le but n'est pas de reproduire immédiatement une infrastructure complexe, mais de construire un environnement réaliste étape par étape et de comprendre chaque composant avant de passer au suivant.
 
+## Navigation
+
+- [Architecture cible du laboratoire](architecture.md)
+
 ## Objectifs du laboratoire
 
 Le laboratoire servira à pratiquer :
