@@ -25,8 +25,14 @@ Consolidation des expériences déjà réalisées avant le démarrage du laborat
 - diagnostic système ;
 - outils IA utilisés dans un environnement de développement.
 
+### 01 — IT Lab
+La construction du laboratoire est maintenant planifiée et documentée :
+
+- [Feuille de route du laboratoire](01-lab/README.md)
+- [Architecture cible](01-lab/architecture.md)
+
 ### Prochaine étape
-Construction du laboratoire IT : systèmes, réseau, sécurité et automatisation.
+Préparer l'environnement de virtualisation et créer la première machine virtuelle.
 
 ## Principe du dépôt
 
