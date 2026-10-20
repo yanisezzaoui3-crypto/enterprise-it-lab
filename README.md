@@ -31,8 +31,13 @@ La construction du laboratoire est maintenant planifiée et documentée :
 - [Feuille de route du laboratoire](01-lab/README.md)
 - [Architecture cible](01-lab/architecture.md)
 
+### 02 — Réseau
+
+- [Premier réseau Cisco Packet Tracer : deux PC et un switch](02-reseau/01-deux-pc/README.md)
+- Test PC0 vers PC1 réussi : 4 réponses sur 4, aucune perte. Configurations et captures documentées.
+
 ### Prochaine étape
-Préparer l'environnement de virtualisation et créer la première machine virtuelle.
+Ajouter la sauvegarde Packet Tracer au dépôt et consolider ce premier exercice réseau.
 
 ## Principe du dépôt
 
