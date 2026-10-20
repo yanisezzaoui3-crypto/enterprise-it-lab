@@ -55,7 +55,10 @@ Ces notions restent à consolider par une reproduction autonome de l'exercice.
 - Câble console confondu avec câble Ethernet : sélection du câble droit et des ports FastEthernet.
 - Voyant orange temporaire du switch : attente du passage au vert pendant la transition STP.
 
+## Sauvegarde
+
+[Ouvrir ou télécharger le projet Packet Tracer](01-reseau-deux-pc.pkt) — à ouvrir avec Cisco Packet Tracer.
+
 ## Suite
 
-- Ajouter la sauvegarde `01-reseau-deux-pc.pkt` (pas encore fournie).
-- Tester ensuite PC1 vers PC0 et refaire la configuration avec moins d'aide.
+- Tester PC1 vers PC0 et refaire la configuration avec moins d'aide.
