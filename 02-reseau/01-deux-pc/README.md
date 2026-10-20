@@ -55,10 +55,22 @@ Ces notions restent à consolider par une reproduction autonome de l'exercice.
 - Câble console confondu avec câble Ethernet : sélection du câble droit et des ports FastEthernet.
 - Voyant orange temporaire du switch : attente du passage au vert pendant la transition STP.
 
+## Test inverse : PC1 vers PC0
+
+Commande exécutée depuis **PC1 → Desktop → Command Prompt** :
+
+```text
+ping 192.168.1.10
+```
+
+Résultat observé : **4 demandes envoyées, 4 réponses reçues, 0 perte (0 %)**. Les tests ping sont donc réussis dans les deux sens.
+
+![Ping de PC1 vers PC0](captures/ping-pc1-vers-pc0.png)
+
 ## Sauvegarde
 
 [Ouvrir ou télécharger le projet Packet Tracer](01-reseau-deux-pc.pkt) — à ouvrir avec Cisco Packet Tracer.
 
 ## Suite
 
-- Tester PC1 vers PC0 et refaire la configuration avec moins d'aide.
+- Refaire la configuration avec moins d'aide et expliquer le rôle des adresses IP, du masque et du ping.
