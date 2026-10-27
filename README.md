@@ -36,10 +36,10 @@ La construction du laboratoire est maintenant planifiée et documentée :
 - [Premier réseau Cisco Packet Tracer : deux PC et un switch](02-reseau/01-deux-pc/README.md)
 - Test PC0 vers PC1 réussi : 4 réponses sur 4, aucune perte. Configurations et captures documentées.
 - [Deuxième réseau : trois PC et un switch](02-reseau/02-trois-pc/README.md) — configurations IPv4 vérifiées et pings de PC2 vers PC0 et PC1 réussis le 27 octobre 2026 (4 réponses sur 4 à chaque test).
-- [Troisième réseau : deux sous-réseaux reliés par un routeur](02-reseau/03-routeur-deux-reseaux/README.md) — table de routage interprétée avec accompagnement ; pings PC0↔PC3, PC1→PC3 et PC2→PC3 réussis le 27 octobre 2026 (4 réponses sur 4).
+- [Troisième réseau : deux sous-réseaux reliés par un routeur](02-reseau/03-routeur-deux-reseaux/README.md) — table de routage interprétée avec accompagnement ; pings PC0↔PC3, PC1→PC3 et PC2→PC3 réussis (4 réponses sur 4), puis trajet PC3→PC1 observé en mode Simulation le 27 octobre 2026.
 
 ### Prochaine étape
-Observer un ping en mode Simulation, puis refaire les tests de routage et expliquer la table avec moins d'aide. Les fichiers `.pkt` restent pour l'instant sur le PC local.
+Réaliser une panne volontaire d'adressage et la corriger. Consolider l'explication du masque et reproduire la configuration avec moins d'aide. Les fichiers `.pkt` restent pour l'instant sur le PC local.
 
 ## Principe du dépôt
 
