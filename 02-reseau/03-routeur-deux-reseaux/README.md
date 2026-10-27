@@ -58,6 +58,14 @@ Chaque test ci-dessous a reçu quatre réponses sur quatre, sans perte :
 
 ![Ping de PC2 vers PC3](captures/ping-pc2-vers-pc3.png)
 
+## Observation en mode Simulation
+
+Un Simple PDU ICMP a été envoyé de PC3 vers PC1. Packet Tracer a affiché le trajet **PC3 → Switch1 → Router0 → Switch0 → PC1**, puis le retour. Le statut final du PDU est `Successful`.
+
+Cette observation montre le rôle du routeur : le trafic quitte le réseau `192.168.2.0/24` par la passerelle de PC3 (`192.168.2.1`), traverse Router0, puis rejoint le réseau `192.168.1.0/24` en direction de PC1.
+
+![Ping ICMP réussi de PC3 vers PC1 en mode Simulation](captures/simulation-pc3-vers-pc1.png)
+
 ## Repères compris pendant la séance
 
 - Le switch relie les appareils du même réseau local. PC0 et PC2 peuvent communiquer par Switch0.
