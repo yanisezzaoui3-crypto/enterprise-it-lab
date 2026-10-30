@@ -1,45 +1,70 @@
-# Portes logiques et binaire — AND, OR, XOR, NOT
+# Portes logiques binaires — AND, OR, XOR et NOT
 
-**Date d'apprentissage :** 30 octobre 2026  
-**Statut :** notion étudiée ; premiers exercices de compréhension réussis. Maîtrise complète à consolider.
+**Date :** 30 octobre 2026  
+**Statut : MAÎTRISÉ** — quatre portes logiques apprises avec leurs tables de vérité.
 
-## Situation
+## Définition
 
-Après avoir découvert les bits (0 et 1) et les valeurs binaires, j'ai appris le rôle de quatre portes logiques.
+Une **table de vérité** présente toutes les combinaisons possibles des entrées et la sortie d'une porte logique.
 
-## Ce que j'ai compris
+- **A** : première entrée (0 ou 1).
+- **B** : deuxième entrée (0 ou 1).
+- **S** : sortie obtenue.
 
-- **AND (ET)** : la sortie vaut 1 seulement si les deux entrées valent 1.
-- **OR (OU)** : la sortie vaut 1 si au moins une entrée vaut 1.
-- **XOR (OU exclusif)** : la sortie vaut 1 si les deux entrées sont différentes.
-- **NOT (NON)** : inverse une seule entrée (0 devient 1 ; 1 devient 0).
+Pour NOT, il n'y a qu'une entrée : A.
 
-### Table de vérité (deux entrées)
+## 1. AND — ET
 
-| A | B | AND | OR | XOR |
-|---|---|---|---|---|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 1 | 0 |
+La sortie vaut **1 uniquement si A ET B valent 1**.
 
-### Table de vérité (NOT)
+| A | B | S |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
 
-| A | NOT A |
+## 2. OR — OU
+
+La sortie vaut **1 si au moins une entrée vaut 1**.
+
+| A | B | S |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+## 3. XOR — OU exclusif
+
+La sortie vaut **1 si A et B sont différents**.
+
+| A | B | S |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+## 4. NOT — NON
+
+La sortie vaut **l'inverse** de l'entrée A.
+
+| A | S |
 |---|---|
 | 0 | 1 |
 | 1 | 0 |
 
-## Test réalisé
+## Apprentissage et vérification
 
-**Question :** quelle est la sortie de XOR si A = 1 et B = 1 ?  
-**Ma réponse :** 0.  
-**Résultat :** correct, puisque XOR exige des entrées différentes pour donner 1.
+- J'ai appris les quatre portes **AND, OR, XOR et NOT** avec les tables de vérité **A / B / S**.
+- **Je maîtrise cette notion.**
+- Exercice effectué : **XOR avec A = 1 et B = 1 : S = 0**, réponse correcte.
 
-## Utilité dans mon parcours IT
+## Lien avec mon apprentissage réseau
 
-Ces opérations sont à la base des circuits logiques. En réseau, l'opération **AND** bit à bit permet également de calculer une adresse réseau à partir d'une adresse IPv4 et de son masque. Ce lien avec les masques reste à pratiquer dans le labo Packet Tracer.
+Les portes logiques constituent une base de l'informatique. **AND** s'applique également bit par bit pour obtenir l'adresse réseau à partir d'une adresse IPv4 et d'un masque. Cette application réseau est une étape distincte de la maîtrise des portes logiques.
 
-## Prochaine consolidation
+## Étape suivante
 
-Reproduire les résultats de AND, OR, XOR et NOT sans aide, puis relier AND à un exemple d'adresse IPv4 et de masque.
+Appliquer AND à un exercice concret de masque IPv4 dans Cisco Packet Tracer.
