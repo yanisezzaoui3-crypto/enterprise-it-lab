@@ -23,7 +23,8 @@ Consolidation des expériences déjà réalisées avant le démarrage du laborat
 - Git et GitHub ;
 - Windows et PowerShell ;
 - diagnostic système ;
-- outils IA utilisés dans un environnement de développement.
+- outils IA utilisés dans un environnement de développement ;
+- [nombres binaires : MAÎTRISÉS](00-foundations/nombres-binaires.md) — valeurs des bits 1, 2, 4 et 8, lecture des bits actifs et addition de leurs valeurs ;
 - [portes logiques AND, OR, XOR et NOT : MAÎTRISÉ](00-foundations/portes-logiques-binaires.md) — tables de vérité A, B, S apprises le 30 octobre 2026.
 
 ### 01 — IT Lab
