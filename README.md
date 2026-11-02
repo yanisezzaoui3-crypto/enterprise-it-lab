@@ -31,7 +31,7 @@ La construction du laboratoire est maintenant planifiée et documentée :
 
 - [Feuille de route du laboratoire](01-lab/README.md)
 - [Architecture cible](01-lab/architecture.md)
-- [Première VM Ubuntu avec VirtualBox](01-lab/ubuntu-tp1/README.md) — VM créée et réglages d’affichage corrigés le 2 novembre 2026 ; démarrage de l’installation à vérifier.
+- [Première VM Ubuntu avec VirtualBox](01-lab/ubuntu-tp1/README.md) — Ubuntu 24.04.5 LTS installé le 2 novembre 2026 ; premier démarrage sur le bureau confirmé, dépannage et captures documentés.
 
 ### 02 — Réseau
 
@@ -41,7 +41,7 @@ La construction du laboratoire est maintenant planifiée et documentée :
 - [Troisième réseau : deux sous-réseaux reliés par un routeur](02-reseau/03-routeur-deux-reseaux/README.md) — table de routage interprétée avec accompagnement ; pings PC0↔PC3, PC1→PC3 et PC2→PC3 réussis (4 réponses sur 4), puis trajet PC3→PC1 observé en mode Simulation le 27 octobre 2026.
 
 ### Prochaine étape
-Relancer la VM Ubuntu et vérifier que l’écran d’installation s’affiche. Ensuite, installer Ubuntu et documenter les premières manipulations Linux. En parallèle, réaliser une panne volontaire d'adressage dans Packet Tracer et la corriger, puis reproduire la configuration avec moins d'aide. Les fichiers .pkt restent pour l'instant sur le PC local.
+Créer le dossier Lab-Linux dans Ubuntu, vérifier la disposition QWERTZ suisse et pratiquer les premières commandes Linux. En parallèle, réaliser une panne volontaire d'adressage dans Packet Tracer et la corriger, puis reproduire la configuration avec moins d'aide. Le fichier .pkt du premier exercice est présent dans le dépôt ; ceux des exercices suivants restent à ajouter.
 
 ## Principe du dépôt
 
