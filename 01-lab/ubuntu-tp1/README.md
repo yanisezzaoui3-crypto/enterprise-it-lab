@@ -50,6 +50,12 @@ Cette dernière capture montre une proposition de passage vers Ubuntu 26.04.1 ; 
 
 L’ancienne [capture de configuration](captures/vm-configuration.png) conserve la trace de l’essai VBoxSVGA ; elle ne représente pas la configuration finale.
 
+### Bureau après les écrans de bienvenue
+
+![Bureau Ubuntu ouvert dans la VM Ubuntu-TP1](captures/bureau-ubuntu.png)
+
+Capture supplémentaire fournie par l’apprenant : le bureau est accessible avec le dossier personnel et les applications visibles.
+
 ## Notions abordées
 
 - Rôle d’un système d’exploitation ; Ubuntu comme distribution Linux.
