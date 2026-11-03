@@ -25,6 +25,7 @@ Consolidation des expériences déjà réalisées avant le démarrage du laborat
 - diagnostic système ;
 - outils IA utilisés dans un environnement de développement.
 - [portes logiques AND, OR, XOR et NOT : MAÎTRISÉ](00-foundations/portes-logiques-binaires.md) — tables de vérité A, B, S apprises le 30 octobre 2026.
+- [CodinGame Fall 2026 et IA locale Ollama / OpenCode](00-foundations/codingame-ia-locale-2026.md) — journal du 3 novembre 2026, progression guidée et vérifications restantes.
 
 ### 01 — IT Lab
 La construction du laboratoire est maintenant planifiée et documentée :
