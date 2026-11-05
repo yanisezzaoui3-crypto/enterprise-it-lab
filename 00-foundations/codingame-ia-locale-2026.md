@@ -37,3 +37,15 @@ Participation au challenge CodinGame Fall 2026 avec un projet local `CODINGAME-F
 ## Prochaine étape unique
 
 Faire lire le dossier `CODINGAME-FALL-2026` par un agent configuré en lecture seule, vérifier qu'il cite des fichiers réellement présents, puis récupérer les tests du bot V3. Ne modifier ou publier aucun bot tant que cet état n'est pas confirmé.
+
+
+## Vérification de la sauvegarde GitHub — 5 novembre 2026
+
+- Contrôle du compte GitHub connecté : aucun dépôt séparé nommé `CODINGAME-FALL-2026` n'apparaît parmi les dépôts accessibles.
+- Ce dépôt `enterprise-it-lab` contient **le journal de progression**, mais **pas le code des bots, ni l'intégralité des règles, ni les tests locaux**. Ne pas confondre journal et sauvegarde du projet.
+- Projet original déclaré sur l'ancien PC : `C:\Users\yanis\OneDrive\Bureau\CODINGAME-FALL-2026`. La présence effective du dossier dans le cloud OneDrive n'est pas encore vérifiée.
+- Fichiers à rechercher dans la copie originale : `docs/REGLES.md`, `docs/RESSOURCES.md`, `docs/REFERENCES.md`, `docs/ETAT_PROJET.md`, `AGENTS.md`, `CLAUDE.md`, `bots/bot_v1.py`, `bots/bot_v2.py`, `bots/bot_v3.py` (ce dernier est signalé dans les échanges, pas vérifié dans GitHub).
+- Bilan des essais **rapportés, pas reproduits** : V1 = 6/8 contre boss Bronze ; V2 = 5/8 ; V3 = 8/8. Point critique V3 : `SPAWN` successifs peuvent faire perdre la propriété/production des triangles.
+- Sur le nouveau PC prêté au laboratoire : retrouver d'abord le **dossier original synchronisé** via OneDrive ou une copie depuis l'ancien PC. Ne pas créer un nouveau bot à partir de zéro tant que cette récupération n'a pas été essayée.
+- Après récupération : ouvrir le dossier dans VS Code, demander à Claude Code et à Codex un **audit en lecture seule** (inventaire fichiers, provenance des règles, vérification tests et compatibilité Gold), avant tout changement.
+- **Attention** : `enterprise-it-lab` est public. Ne pas publier ici le code de compétition en cours ; prévoir un dépôt **privé** séparé pour la sauvegarde complète du projet.
