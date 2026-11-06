@@ -120,3 +120,7 @@ Capture fournie : dans `diskpart`, la commande `list disk` retourne disque 0 **9
 **Deux incidents distincts** : (a) Raspberry Pi Imager n'a pas pu **vérifier l'écriture sur microSD** ; (b) Imager a ensuite affiché **« Unable to download OS list »**, relatif au catalogue en ligne. L'ISO `ubuntu-26.04.1-desktop-amd64.iso` montrée est pour PC x86-64 et non pour Raspberry Pi 5 ARM64. Observer la table de partitions n'expliquera pas à lui seul l'échec du téléchargement de la liste OS.
 
 **Preuve visuelle de cette étape** : capture reçue, fichier PNG non encore publié dans le dépôt.
+
+## DiskPart — détail du disque 2 (6 novembre 2026)
+
+Commandes réellement exécutées par l'apprenant : `list disk`, `select disk 2`, puis `detail disk`. La sortie confirme `Generic- USB3.0 CRW -SD USB Device`, bus **USB**, disque **en ligne**, **lecture seule : Non**, volume n° 4, **34 Go**, **RAW**, **sans lettre**, statut affiché **Sain**. **Interprétation :** Windows voit le support physique mais ne reconnaît pas de système de fichiers exploitable sur ce volume. Cela correspond à l'échec antérieur de vérification de l'écriture, **sans prouver** une défaillance de la microSD ; système de fichiers corrompu/incomplet ou erreur du lecteur/support restent possibles. L'indication `Sain` n'est pas un test d'intégrité de toutes les données. La cause de l'échec de téléchargement du catalogue dans Imager est distincte et n'est pas expliquée par DiskPart. Éviter toute commande destructive sans décision explicite. **Capture fournie en conversation, non encore intégrée au dépôt.**
