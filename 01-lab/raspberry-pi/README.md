@@ -128,3 +128,39 @@ Commandes réellement exécutées par l'apprenant : `list disk`, `select disk 2`
 ## Nouvelle tentative — écran de fin signalé (6 novembre 2026)
 
 L'utilisateur rapporte que **Raspberry Pi Imager a affiché un message autorisant à éjecter le support USB** et qu'il a cliqué sur **« Terminer »**. Cela suggère que l'application considère l'opération d'écriture terminée et la carte retirable. **L'écran de fin et la vérification exacte ne sont pas visibles dans les captures reçues à ce stade ; ne pas affirmer une validation complète sans preuve.** L'image effectivement écrite pendant cette nouvelle tentative (Ubuntu ARM64 pour Raspberry Pi ou Raspberry Pi OS) n'est pas confirmée ici. Le **démarrage sur Raspberry Pi 5 n'a pas encore été vérifié**. Prochaine étape : retirer la microSD en sécurité, l'insérer dans le Raspberry Pi 5 éteint, brancher l'écran si disponible, puis l'alimentation adaptée et observer le premier démarrage. Si la microSD n'est plus dans le lecteur, ne pas chercher à lire `E:` ou `D:` sous Windows.
+
+
+## ✅ Résolution confirmée — premier démarrage graphique (6 novembre 2026)
+
+**Statut : RÉUSSI — Raspberry Pi 5 démarré sur Raspberry Pi OS (bureau graphique affiché).**
+
+### Problème initial
+
+Plusieurs tentatives de préparation du support de démarrage ont échoué. Les symptômes relevés comprennent une erreur de vérification d'écriture dans Raspberry Pi Imager, un support vu comme RAW/non monté par Windows, des difficultés avec plusieurs périphériques USB/SD, et un incident distinct de téléchargement du catalogue des systèmes d'exploitation. Une image Ubuntu Desktop `amd64` avait également été examinée alors que le Raspberry Pi 5 est en architecture ARM64.
+
+### Démarche de diagnostic effectuée
+
+1. Persévérance sur l'hypothèse d'un problème de support/lecteur, au lieu de réinstaller indéfiniment des versions de Linux.
+2. Tests des supports et inspection de leur détection sous Windows avec PowerShell (`Get-Disk`, `Get-Partition`, `Get-Volume`) et DiskPart (`list disk`, `select disk 2`, `detail disk`).
+3. Identification d'anomalies visibles : disque amovible de 34 Go, volume RAW sans lettre, et échecs de vérification d'écriture.
+4. Changement de support : découverte d'une clé USB fonctionnelle, puis nouvelle préparation du démarrage.
+5. Branchement du Raspberry Pi 5, affichage HDMI et alimentation ; vérification sur un vrai écran du démarrage jusqu'au bureau graphique de Raspberry Pi OS.
+
+### Résultat vérifié par les photos du 6 novembre
+
+- **Photo 1** : Raspberry Pi 5, périphérique USB inséré, HDMI et alimentation USB-C connectés, LED verte visible.
+- **Photo 2** : bureau graphique de Raspberry Pi OS visible sur un moniteur externe. Ce résultat confirme le démarrage fonctionnel du système sur le Raspberry Pi 5, et non seulement l'écriture annoncée par Raspberry Pi Imager.
+
+**Nuance technique :** les observations ne prouvent pas que Linux ait endommagé toutes les clés USB précédemment utilisées. Elles montrent qu'un changement de support a permis de lever le blocage dans cette configuration. La cause précise des échecs précédents (support, lecteur, image, corruption d'écriture ou combinaison) reste indéterminée.
+
+### Compétences mises en pratique
+
+- Dépannage matériel et logiciel avec formulation d'une hypothèse.
+- Différence entre détection physique d'un disque et montage d'un système de fichiers.
+- Identification de supports USB/SD et lecture de diagnostics Windows.
+- Préparation d'un support de démarrage adapté et validation du démarrage Linux sur matériel ARM.
+- Preuve du résultat par observation directe et photographies.
+
+**Niveau : première mise en service réussie en pratique ; compétences de diagnostic en cours de consolidation.**
+
+> **Preuves photographiques réelles :** deux photos reçues dans la conversation du 6 novembre 2026. Leur ajout binaire au dossier `preuves/` reste à effectuer. Ne pas confondre ce point de publication avec la réussite technique du démarrage.
