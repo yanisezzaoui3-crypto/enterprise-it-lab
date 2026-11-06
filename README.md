@@ -32,7 +32,7 @@ La construction du laboratoire est maintenant planifiée et documentée :
 
 - [Feuille de route du laboratoire](01-lab/README.md)
 - [Architecture cible](01-lab/architecture.md)
-- [Raspberry Pi 5 : premier démarrage réussi de Raspberry Pi OS (6 novembre 2026)](01-lab/raspberry-pi/README.md) — dépannage des supports USB/microSD, diagnostic PowerShell/DiskPart, bureau graphique vérifié sur écran externe ; publication des deux nouvelles photos encore à finaliser.
+- [Raspberry Pi 5 : premier démarrage réussi de Raspberry Pi OS (6 novembre 2026)](01-lab/raspberry-pi/README.md) — dépannage des supports USB/microSD, diagnostic PowerShell/DiskPart, bureau graphique vérifié sur écran externe ; publication des deux nouvelles photos encore à finaliser. Projet suivant : serveur Minecraft Java avec Paper, non encore installé.
 - [Première VM Ubuntu avec VirtualBox](01-lab/ubuntu-tp1/README.md) — Ubuntu 24.04.5 LTS installé le 2 novembre 2026 ; premier démarrage sur le bureau confirmé, dépannage et captures documentés.
 
 ### 02 — Réseau
