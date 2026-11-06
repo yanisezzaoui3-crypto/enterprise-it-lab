@@ -112,3 +112,11 @@ Une capture ultérieure montre « Unable to download OS list » dans Raspberry P
 - Étape diagnostique conseillée, non destructive : `Get-Partition -DiskNumber 2 | Get-Volume` pour inspecter directement l'association de la partition du disque 2 à un volume, sans changer de lettre ni formater.
 - L'échec antérieur de vérification Raspberry Pi Imager reste ouvert. Le statut `Healthy` dans `Get-Disk`/`Get-Volume` ne garantit pas l'intégrité des données.
 - **Preuve image fournie dans la conversation ; cette nouvelle capture PNG n'est pas encore publiée dans GitHub.**
+
+## DiskPart — inspection sans effacement (6 novembre 2026)
+
+Capture fournie : dans `diskpart`, la commande `list disk` retourne disque 0 **953 Go (GPT)**, disque 1 **aucun média (0 octet)** et disque 2 **en ligne, 34 Go**. L'utilisateur a lui-même ouvert DiskPart et exécuté `list disk`. La prochaine commande proposée est `select disk 2`, qui **sélectionne seulement** le disque cible pour lecture, avant `detail disk` et `list partition` ; éviter `clean`, `format`, `delete partition` et toute écriture tant que le diagnostic n'est pas terminé. Attention : le disque 0 est le disque Windows.
+
+**Deux incidents distincts** : (a) Raspberry Pi Imager n'a pas pu **vérifier l'écriture sur microSD** ; (b) Imager a ensuite affiché **« Unable to download OS list »**, relatif au catalogue en ligne. L'ISO `ubuntu-26.04.1-desktop-amd64.iso` montrée est pour PC x86-64 et non pour Raspberry Pi 5 ARM64. Observer la table de partitions n'expliquera pas à lui seul l'échec du téléchargement de la liste OS.
+
+**Preuve visuelle de cette étape** : capture reçue, fichier PNG non encore publié dans le dépôt.
