@@ -164,3 +164,14 @@ Plusieurs tentatives de préparation du support de démarrage ont échoué. Les 
 **Niveau : première mise en service réussie en pratique ; compétences de diagnostic en cours de consolidation.**
 
 > **Preuves photographiques réelles :** deux photos reçues dans la conversation du 6 novembre 2026. Leur ajout binaire au dossier `preuves/` reste à effectuer. Ne pas confondre ce point de publication avec la réussite technique du démarrage.
+
+
+## Suite du projet — serveur Minecraft Java / Paper (6 novembre 2026)
+
+- **Système de base :** Raspberry Pi 5 et bureau Raspberry Pi OS démarrés avec succès (voir preuves et diagnostic ci-dessus).
+- **Java :** l'apprenant indique que l'installation de Java est faite. Version et fonctionnement à contrôler avec `java -version` ; aucune sortie de commande n'a été fournie ici.
+- **PaperMC :** reste à télécharger et installer ; **aucun serveur Minecraft opérationnel n'a encore été démontré**.
+- **À la reprise :** vérifier `java -version`, l'architecture avec `uname -m`, puis choisir une version de Paper compatible avec la version de Java installée. Prévoir un dossier de serveur, une configuration raisonnable pour les ressources du Raspberry Pi, et accepter l'EULA seulement après lecture.
+- **Point d'arrêt du 6 novembre :** l'apprenant quitte le Fatlab et poursuivra depuis chez lui. Ne pas marquer Paper comme installé avant validation pratique.
+
+**Publication des photos :** les deux photos du Raspberry Pi en fonctionnement restent à déposer dans `preuves/`. Le présent document consigne leur observation, mais les fichiers images binaires ne sont pas encore publiés ici.
