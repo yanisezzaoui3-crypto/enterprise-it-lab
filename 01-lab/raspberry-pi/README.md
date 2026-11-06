@@ -100,3 +100,15 @@ Une capture ultérieure montre « Unable to download OS list » dans Raspberry P
 - `Get-Partition -DiskNumber 2` indique un disque de 34,73 Go avec une partition sans lettre de lecteur.
 - **Interprétation** : `D:` peut être un emplacement de lecteur amovible sans média, et n'est pas encore identifié comme la carte de 34,73 Go. La carte est détectée comme disque physique n° 2, mais n'est pas montée sous `E:`. Aucun formatage ni changement de lettre effectué.
 - **Prochaine commande en lecture seule** : `Get-Volume | Format-Table DriveLetter,FileSystemLabel,FileSystem,Size,HealthStatus -AutoSize` ; poursuivre le lien disque/volume sans supposer que `D:` est la microSD.
+
+## Diagnostic PowerShell — Get-Volume (6 novembre 2026)
+
+**Preuve reçue** : capture PowerShell avec essais de lecture `E:\\` et `D:\\`, puis `Get-Volume`.
+
+- `Get-ChildItem -Path E:\\` : `DriveNotFoundException`, lecteur E absent.
+- `Get-ChildItem -Path D:\\` : `ItemNotFoundException`, chemin D indisponible.
+- `Get-Volume` : `D:` est un lecteur amovible de **0 B**, système de fichiers `Unknown` et état opérationnel `Unknown` ; un second volume amovible sans lettre apparaît également à **0 B / Unknown**. Le volume Windows `C:` en NTFS est sain.
+- **Conclusion prudente** : `D:` n'est pas une preuve de montage de la carte microSD de 34,73 Go. Le lecteur de carte peut annoncer un emplacement sans média ou un volume illisible ; la carte physique est cependant reconnue comme `Disk 2` par `Get-Disk`. Il est impossible de conclure à une défaillance matérielle à partir de ces seules commandes.
+- Étape diagnostique conseillée, non destructive : `Get-Partition -DiskNumber 2 | Get-Volume` pour inspecter directement l'association de la partition du disque 2 à un volume, sans changer de lettre ni formater.
+- L'échec antérieur de vérification Raspberry Pi Imager reste ouvert. Le statut `Healthy` dans `Get-Disk`/`Get-Volume` ne garantit pas l'intégrité des données.
+- **Preuve image fournie dans la conversation ; cette nouvelle capture PNG n'est pas encore publiée dans GitHub.**
