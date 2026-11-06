@@ -92,3 +92,11 @@ Cette capture montre le message d'échec après écriture : le contenu relu sur 
 ## Observation supplémentaire : catalogue hors ligne et mauvais fichier ISO
 
 Une capture ultérieure montre « Unable to download OS list » dans Raspberry Pi Imager. Le titre de la fenêtre mentionne `ubuntu-26.04.1-desktop-amd64.iso`, destiné aux PC x86-64 et non au Raspberry Pi 5 (ARM64). La section « Options app > Dépôt de contenu » sert à régler la source du catalogue d'images et non la destination de l'installation. Conserver « Raspberry Pi (default) » et réessayer le chargement du catalogue ; une image locale doit être conçue pour Raspberry Pi 5. Cet incident réseau est distinct de l'échec de vérification d'écriture.
+
+## Diagnostic des lettres de lecteur (6 novembre 2026)
+
+- `Get-CimInstance -ClassName Win32_LogicalDisk | Where-Object {$_.DriveType -eq 2}` affiche seulement `D:` comme lecteur amovible, sans taille.
+- `Get-ChildItem -Path E:\\` renvoie `DriveNotFoundException` : aucune lettre `E:` n'est actuellement montée dans Windows.
+- `Get-Partition -DiskNumber 2` indique un disque de 34,73 Go avec une partition sans lettre de lecteur.
+- **Interprétation** : `D:` peut être un emplacement de lecteur amovible sans média, et n'est pas encore identifié comme la carte de 34,73 Go. La carte est détectée comme disque physique n° 2, mais n'est pas montée sous `E:`. Aucun formatage ni changement de lettre effectué.
+- **Prochaine commande en lecture seule** : `Get-Volume | Format-Table DriveLetter,FileSystemLabel,FileSystem,Size,HealthStatus -AutoSize` ; poursuivre le lien disque/volume sans supposer que `D:` est la microSD.
