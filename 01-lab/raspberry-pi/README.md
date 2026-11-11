@@ -233,3 +233,17 @@ Deux photographies supplémentaires ont été fournies dans la conversation. Ell
 **Prochaine vérification :** laisser finir le processus, observer le message final et confirmer que Pi-Apps s'ouvre. Ensuite distinguer l'installation d'un client Minecraft de celle d'un serveur Java/PaperMC.
 
 **Publication de la photo :** son contenu est décrit ici, mais le JPEG original n'a pas encore été ajouté au dossier GitHub `preuves/`.
+
+
+## Préparation Minecraft / PaperMC — installation Java 21 (11 novembre 2026)
+
+**Intention annoncée :** installer PaperMC sur Raspberry Pi 5 pour héberger un serveur Minecraft. Deux nouvelles photos ont été fournies en conversation.
+
+- **Capture du terminal** (`IMG_14F14997-6A2D-4D0E-AFA6-2C3AF6EB6538.jpeg`) : l'installation des paquets précédents affiche `done`, puis le gestionnaire APT propose d'installer `default-jre` et des dépendances, notamment `openjdk-21-jre` et `openjdk-21-jre-headless`. Résumé visible : **8 paquets à installer**, **41,2 Mo à télécharger**, **205 Mo d'espace nécessaires**, **233 Go disponibles**. L'invite est arrêtée à `Continue? [Y/n]` : **Java 21 n'est pas encore confirmé installé à cet instant**.
+- **Photo du tutoriel** (`IMG_133F21B6-195E-494E-95EB-57D5CB31828A.jpeg`) : page RaspberryTips présentant l'installation de Pi-Apps via un script hébergé sur GitHub. La photo montre les instructions d'un site web, pas la confirmation de leur exécution sur l'appareil.
+
+**Statut technique :** préparation du serveur Minecraft en cours ; l'installation de Java attend confirmation. Pi-Apps n'est pas confirmé fonctionnel par ces captures, et **aucun téléchargement ou démarrage de PaperMC n'est visible**.
+
+**Prochaine vérification :** confirmer l'installation APT, attendre sa fin puis lancer `java -version`. Ensuite seulement vérifier la compatibilité de la version de Java avec la version de Paper souhaitée, et installer PaperMC séparément.
+
+**Preuves :** les deux JPEG sont reçus dans la conversation ; les originaux ne sont pas encore publiés dans `preuves/` sur GitHub.
