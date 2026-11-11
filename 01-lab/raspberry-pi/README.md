@@ -262,3 +262,51 @@ Une nouvelle photographie du terminal Raspberry Pi OS a été reçue : `IMG_6303
 **Statut : installation APT de Java 21 terminée avec succès apparent.** Vérification d'exécution à faire avec `java -version` ; la capture ne montre pas encore cette commande. **PaperMC n'est pas encore installé ni lancé d'après les preuves disponibles.**
 
 **Prochaine action :** exécuter `java -version` et conserver sa sortie comme preuve. Le fichier JPEG original est reçu dans la conversation mais n'est pas encore hébergé dans le dépôt GitHub.
+
+
+## Historique réel des commandes Linux — photo du 11 novembre 2026
+
+**Source :** photographie de la commande `history` dans un terminal Raspberry Pi OS, fichier partagé en conversation `IMG_AFA9F700-98B4-4145-9E12-9D5B6EE2F8C9.jpeg`. L'image montre les entrées numérotées **1 à 28** ; la ligne 29 est coupée. Les commandes ci-dessous sont retranscrites telles qu'elles sont lisibles, **y compris les essais potentiellement erronés**. Une commande dans l'historique prouve sa saisie, pas son succès.
+
+```bash
+ 1  lsblk
+ 2  uname
+ 3  uname -r
+ 4  man uname
+ 5  man lsblk
+ 6  reboot
+ 7  wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
+ 8  sensors
+ 9  vcgencmd measure_temp
+10  sudo apt update
+11  sudo apt upgrade
+12  sudo apt install default-jre
+13  mkdir /home/pat/minecraft
+14  cp paper-1.20.4-373.jar /home/pat/minecraft/~
+15  cd /home/pat/minecraft/
+16  java -jar paper-1.20.4-373.jar~
+17  cd /home/pat/minecraft/
+18  java -jar paper-1.20.4-373.jar~
+19  cd /home/pat/minecraft/
+20  java -jar paper-1.20.4-373.jar
+21  cd Documents/
+22  ls
+23  java -version
+24  java -Xms12G -Xmx12G -jar paper-26.3-248.jar --nogui
+25  ls
+26  ls -l
+27  man ls
+28  cd Documents/
+```
+
+**Points d'apprentissage et vérifications :**
+- Les commandes `lsblk`, `uname`, `man`, `sensors` et `vcgencmd measure_temp` montrent des essais de découverte du matériel, du noyau et de la température.
+- Pi-Apps a fait l'objet d'une commande d'installation ; sa réussite n'est pas démontrée par cette seule photo.
+- `sudo apt update`, `sudo apt upgrade` et `sudo apt install default-jre` montrent le travail de maintenance et l'installation de Java ; la réussite de Java 21 est corroborée par une autre capture du journal.
+- Les chemins `/home/pat/minecraft` apparaissent dans l'historique, alors que l'invite visible sur la photo indique `wadaha@WADA3A` : **vérifier l'existence de ce répertoire et ne pas supposer que `pat` est l'utilisateur courant**.
+- Les commandes se terminant par `.jar~` et le chemin de destination `/home/pat/minecraft/~` sont conservés comme saisis ; ils peuvent correspondre à des erreurs de nom ou de chemin.
+- La commande `java -Xms12G -Xmx12G -jar paper-26.3-248.jar --nogui` demande **12 Go de RAM minimum et maximum** : quantité à vérifier par rapport à la RAM réelle du Raspberry Pi avant toute relance. La compatibilité de ce fichier Paper avec Java 21 doit aussi être vérifiée.
+- **Aucun démarrage réussi de PaperMC n'est prouvé** par l'historique seul : il faut une sortie du serveur, l'apparition des fichiers de configuration et un message de disponibilité.
+- **Photo originale :** reçue dans la conversation, mais non encore publiée comme fichier JPEG dans le dossier GitHub `preuves/`.
+
+**Prochaine vérification sûre, sans relancer le serveur :** depuis le terminal, examiner le répertoire courant avec `pwd`, les fichiers avec `ls -lh`, et la RAM avec `free -h`.
