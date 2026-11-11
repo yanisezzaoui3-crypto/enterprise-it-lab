@@ -175,3 +175,30 @@ Plusieurs tentatives de préparation du support de démarrage ont échoué. Les 
 - **Point d'arrêt du 6 novembre :** l'apprenant quitte le Fatlab et poursuivra depuis chez lui. Ne pas marquer Paper comme installé avant validation pratique.
 
 **Publication des photos :** les deux photos du Raspberry Pi en fonctionnement restent à déposer dans `preuves/`. Le présent document consigne leur observation, mais les fichiers images binaires ne sont pas encore publiés ici.
+
+
+## Notes manuscrites de l'atelier — ajout du 11 novembre 2026
+
+Deux photographies de notes personnelles ont été partagées pour enrichir ce journal. Elles documentent les notions étudiées autour du Raspberry Pi 5. **Les photographies originales ne sont pas encore publiées dans le dépôt** ; cette section est une transcription structurée des passages lisibles, pas une transcription mot à mot exhaustive.
+
+### Feuille 1 — matériel, utilité et branchements
+- Liste manuscrite « Matériel / Utilité » : alimentation (alimenter la carte), carte SD / microSD, câbles HDMI, clavier USB, ventilateur / refroidissement.
+- Observation manuscrite : le système de refroidissement ne monte pas automatiquement (formulation approximative de la note ; fonctionnement exact non vérifié).
+- Remarque sur le démarrage et le BIOS : à distinguer du processus de démarrage propre au Raspberry Pi, qui n'est pas le BIOS classique d'un PC.
+- Schéma dessiné du Raspberry Pi et de ses connexions : HDMI, USB-C (alimentation) et ports USB.
+- Une mention « OS : Ubuntu » figure sur la feuille : **ne pas la prendre comme preuve de l'OS final**, puisque le démarrage effectivement confirmé dans ce journal est Raspberry Pi OS.
+
+### Feuille 2 — réseau et accès distant
+- **Adresse IP** : identifier un appareil / une interface sur un réseau ; exemple manuscrit ressemblant à `192.168.1.20` (adresse pédagogique, non confirmée comme IP réelle du Pi).
+- **Port** : identifier le service auquel on souhaite accéder sur une machine.
+- **SSH** : établir une connexion distante sécurisée, notamment pour utiliser un terminal.
+- **Utilisateur** : compte Linux employé pour l'authentification ; le nom exact du compte du Pi reste à confirmer.
+- **Nom local** : note mentionnant `wada3a.local`, à utiliser seulement si la résolution du nom fonctionne sur le réseau local.
+- **TCP** : « Transmission Control Protocol », protocole de transport fiable ; notion liée aux accusés de réception et retransmissions.
+- **Authentification SSH** : notes sur la connexion par utilisateur/mot de passe et sur une paire de clés cryptographiques ; la clé publique peut être placée côté serveur, la clé privée doit rester secrète.
+- **À revoir** : plusieurs formulations manuscrites sont abrégées ou difficiles à lire ; aucune connexion SSH réelle n'est démontrée par ces notes.
+
+### Statut des preuves
+- Photos fournies en conversation : `IMG_2439.jpeg` (matériel et schéma) et `IMG_2438.jpeg` (réseau/SSH/TCP).
+- **Fichiers image non encore ajoutés à GitHub** : ne pas présenter cette transcription comme si les photos étaient déjà hébergées.
+- Ces notes complètent la réussite du premier démarrage Raspberry Pi OS du 6 novembre ; elles ne démontrent pas l'installation de PaperMC.
