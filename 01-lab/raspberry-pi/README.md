@@ -214,3 +214,22 @@ Deux photographies supplémentaires ont été fournies dans la conversation. Ell
 **Statut confirmé :** mise en service initiale de Raspberry Pi OS réussie. **Non vérifiés par ces photos :** version de Java, accès SSH, serveur Minecraft PaperMC, connectivité réseau.
 
 **Publication des fichiers binaires :** ces deux photographies ont été reçues dans la conversation et décrites ici, mais leurs fichiers JPEG **ne sont pas encore transférés dans le répertoire GitHub `preuves/`**. Ne pas confondre l'ajout de leur description avec l'hébergement des images.
+
+
+## Nouvelle étape — installation de Pi-Apps pour Minecraft (photo reçue le 11 novembre 2026)
+
+**Objectif déclaré :** installer Pi-Apps afin de trouver et installer des applications liées au jeu Minecraft et à l'hébergement d'un serveur sur le Raspberry Pi 5.
+
+**Preuve visuelle reçue :** photo du bureau Raspberry Pi OS avec terminal ouvert (fichier transmis en conversation : `IMG_F5ABCB43-E753-438B-B960-BA50094DF882.jpeg`).
+
+**Observations directement visibles :**
+- Session graphique Raspberry Pi OS et fenêtre de terminal ouvertes ; titre de terminal semblant indiquer l'utilisateur `wadaha` sur l'hôte `WADA3A` (lecture de la photographie à confirmer sur l'appareil).
+- Installation de paquets Debian en cours : lignes `Preparing to unpack`, `Unpacking`, notamment `debconf` et `imagemagick`.
+- Certains noms de paquets se terminent par `arm64`, cohérent avec l'architecture du Raspberry Pi 5.
+- Indicateur de progression à **31 %** au moment de la photographie.
+
+**Statut : EN COURS.** La photographie ne montre pas la fin de l'installation, l'ouverture de Pi-Apps, ni l'installation de Minecraft ou d'un serveur PaperMC. Ne pas les déclarer réussis sans validation supplémentaire.
+
+**Prochaine vérification :** laisser finir le processus, observer le message final et confirmer que Pi-Apps s'ouvre. Ensuite distinguer l'installation d'un client Minecraft de celle d'un serveur Java/PaperMC.
+
+**Publication de la photo :** son contenu est décrit ici, mais le JPEG original n'a pas encore été ajouté au dossier GitHub `preuves/`.
