@@ -202,3 +202,15 @@ Deux photographies de notes personnelles ont été partagées pour enrichir ce j
 - Photos fournies en conversation : `IMG_2439.jpeg` (matériel et schéma) et `IMG_2438.jpeg` (réseau/SSH/TCP).
 - **Fichiers image non encore ajoutés à GitHub** : ne pas présenter cette transcription comme si les photos étaient déjà hébergées.
 - Ces notes complètent la réussite du premier démarrage Raspberry Pi OS du 6 novembre ; elles ne démontrent pas l'installation de PaperMC.
+
+
+## Deux nouvelles photos de preuve du démarrage — reçues le 11 novembre 2026
+
+Deux photographies supplémentaires ont été fournies dans la conversation. Elles corroborent le **premier démarrage réussi du Raspberry Pi 5** déjà consigné au 6 novembre 2026.
+
+1. **Photo du matériel en fonctionnement** (fichier original transmis : `IMG_9B6A67E8-5FE1-4DE3-BF25-2D5AEF7876BB.jpeg`) : carte Raspberry Pi 5 visible, câble réseau Ethernet, câble HDMI, alimentation USB-C, périphériques USB et LED verte allumée. La photo démontre le montage physique et l'alimentation ; elle ne démontre pas à elle seule l'accès Internet ou SSH.
+2. **Photo de l'écran** (fichier original transmis : `IMG_E9957108-AD79-4476-A4AE-BB1FA06F2EF5.jpeg`) : bureau graphique de Raspberry Pi OS affiché sur un moniteur Dell, avec barre supérieure et environnement graphique chargé. C'est une preuve visuelle de démarrage jusqu'à la session graphique.
+
+**Statut confirmé :** mise en service initiale de Raspberry Pi OS réussie. **Non vérifiés par ces photos :** version de Java, accès SSH, serveur Minecraft PaperMC, connectivité réseau.
+
+**Publication des fichiers binaires :** ces deux photographies ont été reçues dans la conversation et décrites ici, mais leurs fichiers JPEG **ne sont pas encore transférés dans le répertoire GitHub `preuves/`**. Ne pas confondre l'ajout de leur description avec l'hébergement des images.
