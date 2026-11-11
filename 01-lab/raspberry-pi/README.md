@@ -247,3 +247,18 @@ Deux photographies supplémentaires ont été fournies dans la conversation. Ell
 **Prochaine vérification :** confirmer l'installation APT, attendre sa fin puis lancer `java -version`. Ensuite seulement vérifier la compatibilité de la version de Java avec la version de Paper souhaitée, et installer PaperMC séparément.
 
 **Preuves :** les deux JPEG sont reçus dans la conversation ; les originaux ne sont pas encore publiés dans `preuves/` sur GitHub.
+
+
+## Java 21 — installation terminée (capture du 11 novembre 2026)
+
+Une nouvelle photographie du terminal Raspberry Pi OS a été reçue : `IMG_63033E67-0304-4BD3-A002-19DA375B8B28.jpeg`.
+
+**Constats visibles :**
+- `Setting up openjdk-21-jre:arm64 (21.0.13+9-1~deb13u2) ...`
+- `Setting up default-jre-headless (2:1.21-76) ...`
+- `Setting up default-jre (2:1.21-76) ...`
+- Retour à l'invite de commande `wadaha@WADA3A:~ $` sans erreur visible en fin de sortie.
+
+**Statut : installation APT de Java 21 terminée avec succès apparent.** Vérification d'exécution à faire avec `java -version` ; la capture ne montre pas encore cette commande. **PaperMC n'est pas encore installé ni lancé d'après les preuves disponibles.**
+
+**Prochaine action :** exécuter `java -version` et conserver sa sortie comme preuve. Le fichier JPEG original est reçu dans la conversation mais n'est pas encore hébergé dans le dépôt GitHub.
