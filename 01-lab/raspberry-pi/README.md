@@ -330,3 +330,42 @@ Une nouvelle photographie du terminal Raspberry Pi OS a été reçue : `IMG_6303
 ### Publication des images
 
 Les **13 captures d'écran de la session du 13 novembre** ont été reçues et préparées en dehors du dépôt. **Leurs fichiers binaires ne sont pas encore publiés sur GitHub** : ne pas présenter cette documentation comme une galerie photographique en ligne tant que les PNG n'ont pas été ajoutés au dossier `preuves/ssh-2026-11-13/`. Avant publication publique, masquer les détails non nécessaires (utilisateurs, IP internes, empreintes de clés éventuelles, chemins sensibles).
+
+
+## 13 novembre 2026 — installation d'une pile web Apache / MariaDB / PHP
+
+**Contexte :** depuis un terminal Linux sur Raspberry Pi 5 (Debian ARM64), installation d'outils pour héberger une application web. Cela constitue un **projet de serveur web**, distinct du projet de serveur Minecraft PaperMC.
+
+### Commandes indiquées par l'apprenant
+
+```bash
+sudo apt install apache2 -y
+sudo apt install mariadb-server php-mysql -y
+sudo apt install php libapache2-mod-php -y
+```
+
+- **Apache2** : serveur HTTP qui répond aux requêtes d'un navigateur.
+- **MariaDB** : base de données relationnelle qui stocke des informations.
+- **php-mysql** : module qui permet à PHP de communiquer avec MySQL/MariaDB.
+- **PHP** : langage exécuté côté serveur pour produire du contenu dynamique.
+- **libapache2-mod-php** : intégration de PHP à Apache.
+- **`sudo`** : exécution avec privilèges administrateur ; **`apt install`** : installation via le gestionnaire de paquets Debian ; **`-y`** : répond oui aux confirmations d'apt.
+
+### Preuves observées dans les captures
+
+- Capture précédente : fin d'installation d'Apache2, configuration et activation de modules, retour au prompt Linux.
+- Capture du 13 novembre vers 13 h : installation PHP 8.4 terminée ; lignes `Setting up php8.4-cli`, `Setting up libapache2-mod-php8.4` et `Setting up php8.4`, configuration du module Apache et **retour au prompt `wadaha@WADA3A:~ $`**, sans erreur visible.
+- L'apprenant indique avoir également exécuté `sudo apt install mariadb-server php-mysql -y`, mais la capture transmise ne montre **pas** le résultat de cette commande : installation de MariaDB et de php-mysql **à vérifier**.
+
+### État de validation — ne pas confondre installation et fonctionnement
+
+| Composant | Ce que l'on sait | Ce qui reste à tester |
+|---|---|---|
+| Apache2 | Installation terminée visible dans la capture précédente | `systemctl is-active apache2` puis réponse HTTP |
+| PHP 8.4 | Installation et configuration du module Apache visibles | `php -v` et test d'une page PHP servie par Apache |
+| MariaDB | Commande d'installation déclarée | `systemctl is-active mariadb` et version |
+| php-mysql | Commande d'installation déclarée | `php -m` pour vérifier `mysqli` / `pdo_mysql` |
+
+**Prochaine action prioritaire :** `sudo systemctl status apache2` pour vérifier si Apache2 est démarré ; la présence du logiciel ne suffit pas à prouver que le service tourne.
+
+**Confidentialité :** ne pas publier de mots de passe, clés SSH privées, jetons, ou données d'administration. La capture originale a été reçue dans la conversation, mais son fichier image binaire n'est **pas encore intégré au dépôt GitHub**.
