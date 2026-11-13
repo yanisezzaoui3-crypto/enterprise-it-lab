@@ -369,3 +369,16 @@ sudo apt install php libapache2-mod-php -y
 **Prochaine action prioritaire :** `sudo systemctl status apache2` pour vérifier si Apache2 est démarré ; la présence du logiciel ne suffit pas à prouver que le service tourne.
 
 **Confidentialité :** ne pas publier de mots de passe, clés SSH privées, jetons, ou données d'administration. La capture originale a été reçue dans la conversation, mais son fichier image binaire n'est **pas encore intégré au dépôt GitHub**.
+
+
+## Objectif confirmé le 13 novembre 2026 : héberger un site web
+
+**Objectif principal actuel :** héberger et consulter un site web sur le Raspberry Pi 5, d'abord depuis un navigateur du réseau local. Ce projet utilise Apache, PHP et MariaDB ; il est distinct du projet Minecraft.
+
+**État déclaré par l'apprenant :** configuration de la clé SSH **réussie** et installation de **MariaDB réussie**. Ces deux opérations sont marquées comme effectuées selon son retour ; une vérification technique reproductible est toujours utile, sans remettre en cause son compte rendu.
+
+**Déjà effectué :** connexion SSH à Linux, installation Apache2, installation PHP 8.4, installation MariaDB selon confirmation de l'apprenant et configuration de clé SSH selon confirmation.
+
+**À démontrer ensuite :** service Apache actif, ouverture de la page d'accueil Apache depuis le navigateur sur le PC, publication d'une première page HTML dans `/var/www/html/`, puis éventuellement test PHP et base MariaDB. Ne pas ouvrir les ports sur Internet pour ce premier exercice.
+
+**Prochaine commande unique :** `sudo systemctl status apache2` sur le terminal du Raspberry Pi. Attendre la sortie avant de passer au test navigateur.
