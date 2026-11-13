@@ -310,3 +310,23 @@ Une nouvelle photographie du terminal Raspberry Pi OS a été reçue : `IMG_6303
 - **Photo originale :** reçue dans la conversation, mais non encore publiée comme fichier JPEG dans le dossier GitHub `preuves/`.
 
 **Prochaine vérification sûre, sans relancer le serveur :** depuis le terminal, examiner le répertoire courant avec `pwd`, les fichiers avec `ls -lh`, et la RAM avec `free -h`.
+
+
+## Session du 13 novembre 2026 — SSH depuis Windows (preuves photographiques)
+
+**Statut observé : connexion SSH au Raspberry Pi réussie depuis PowerShell, génération d'une clé SSH Ed25519 et essai d'installation de la clé publique.** Les captures ne constituent pas à elles seules une preuve qu'une connexion *sans mot de passe* a été validée : ce test reste à refaire séparément.
+
+### Étapes illustrées dans les captures originales
+
+1. Essais initiaux avec le nom d'hôte local `raspberry.local` : résolution de nom impossible à ce moment-là. Cela n'implique pas que le Raspberry Pi soit hors ligne.
+2. Première connexion à l'adresse IPv4 locale du Raspberry Pi : avertissement normal sur l'authenticité d'un hôte SSH encore inconnu, puis ajout de son empreinte au fichier Windows `known_hosts`.
+3. Ouverture d'une session Debian GNU/Linux sur le Raspberry Pi, visible au prompt Linux. La connexion distante par SSH est donc **pratiquée et réussie**.
+4. Génération côté Windows d'une paire de clés `ed25519` avec `ssh-keygen -t ed25519`, dans le dossier personnel `.ssh` ; identification de la différence entre clé privée et clé publique.
+5. Envoi du contenu de la **clé publique seulement** vers le fichier Linux `~/.ssh/authorized_keys` via une commande PowerShell et SSH, puis saisie du mot de passe de la session existante. La clé privée ne doit jamais être publiée.
+6. Dernière capture : prompt Linux Debian après connexion SSH. L'ouverture de session SSH est prouvée, mais pas l'authentification par clé sans mot de passe.
+
+**Prochain contrôle reproductible :** ouvrir un nouveau terminal Windows et tenter `ssh utilisateur@adresse-ip-locale` ; vérifier si la connexion utilise bien la clé sans redemander le mot de passe du compte Linux. Les noms et adresses exacts ont été omis de ce résumé public.
+
+### Publication des images
+
+Les **13 captures d'écran de la session du 13 novembre** ont été reçues et préparées en dehors du dépôt. **Leurs fichiers binaires ne sont pas encore publiés sur GitHub** : ne pas présenter cette documentation comme une galerie photographique en ligne tant que les PNG n'ont pas été ajoutés au dossier `preuves/ssh-2026-11-13/`. Avant publication publique, masquer les détails non nécessaires (utilisateurs, IP internes, empreintes de clés éventuelles, chemins sensibles).
